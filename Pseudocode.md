@@ -13,17 +13,21 @@ THEN I can save my initials and my score
 
 Create a game "Coding Quiz Game"
 "Try to answer the following questions about JavaScript!"
-1. Create a start button
+1. Top of page DISPLAY NEEDED
+Highscores are in a new .html 
+    // displayed on the top left of the screen 
+    // keeps history of the previous high scores
+
+2. Create a start button ----> DONE
     // Create timer to start & first question appear
-2. Loop for question 1 to the next question
-3. Answer incorrectly   
+3. Loop for question 1 to the next question
+4. Answer incorrectly   
     // 
     // Time is subtracted from the clock
-4. Game over
+5. Game over
     //IF all questions === 0
     //IF the timer === 0
-    // text "All done"
+    // text "All done!"
     // display scores
-5. Put initials and score in 
-6. Highscores are in a new .html 
-    // displayed on the top left of the screen 
+    //Enter initials and submit button
+6. Put initials and score in 

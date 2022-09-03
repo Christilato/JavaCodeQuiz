@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz Challenge</title>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
 <body>
+    <div class="scores"><a href =highscores.html </div>
+    <div class="timer">Time:<span id="time">0</span></div>    
+
     <h1>
        <title> Coding Quiz Challenge</title> 
        <p>
@@ -14,15 +18,16 @@
         Keep in mind that incorrect answers will penalize your score time by
         ten seconds!
        </p>
+       <button id="start">Start Quiz</button>
     </h1> 
      
-    <button id="start">
-        Start Quiz
-    </button>
-    <div id="counter"> 
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div> 
+        </div>
 
-    </div>
 
+    <script src="./Assets/Java/questions.js"></script>
     <script src="./Assets/Java/script.js"></script>
 </body>
 </html>

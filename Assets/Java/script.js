@@ -1,9 +1,15 @@
 
+
+import {questions} from "./questions";
+
+
 var startBtn = document.getElementById("start");
 var counterDiv = document.getElementById("counter");
+var questionsDiv = document.querySelector("quesetions");
+
 
 startBtn.addEventListener("click", function() {
-
+    var questions = 
     var counter = 60;
     var timer = setInterval(function()
     {
@@ -23,7 +29,6 @@ startBtn.addEventListener("click", function() {
 
 
 
-// import questions from "./questions";
 
 function isIncorrect(){
 
