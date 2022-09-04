@@ -1,35 +1,57 @@
 
-
-import {questions} from "./questions";
-
-
+// import {questions} from "./questions";
+var questions = [import {questions} from "./questions"]
+var pTags = document.querySelectorAll("p");
 var startBtn = document.getElementById("start");
-var counterDiv = document.getElementById("counter");
-var questionsDiv = document.querySelector("quesetions");
+var timerDiv = document.querySelector("timer");
+var questionsDiv = document.querySelector ("questions");
+var correctAnswer = localStorage.getItem("correct");
+var incorrectAnswer = localStorage.getItem("incorrect");
+
+pTags[0].setAttribute("style", "font-size: 20px;"); // add attributes to the words in <p>
+
 
 
 startBtn.addEventListener("click", function() {
-    var questions = 
-    var counter = 60;
+    var timer = 60;
     var timer = setInterval(function()
     {
-    counter--;
-    counterDiv.textContent = counter;
-    if( counter === 0){
+    timer--;
+    timerDiv.textContent = " ";
+    //show final score
+     if( timer === 0){
         clearInterval(timer);
+        // display the scores
     }
-    if(isIncorrect()){
-        alert ("Wrong");
-        // add decrease by 10 seconds to the timer 
-    } else {
-        alert ("Correct!");
-    }
-    }, 1000);
+}, 1000);
 })
 
 
 
-
-function isIncorrect(){
-
+for (var index = 0; index < questionsDiv.length; index++) {
+    var response = window.prompt(questions[i].prompt)
+    if (response == questions [i].answer){
+        score++
+        alert ("correct!");
+    } else {
+        alert ("Wrong!");
+    }
 }
+
+alert("you got " + score + "/" + questions.length)
+
+// does this go in the scores sheet?
+// function showResponse(event){
+//     event.preventDefault ();
+
+// }
+// submitEl.addEventListener("click", showResponse); // submit button
+
+// clearing the initials line?
+// learEl.addEventListener('click', function (event) {
+    // event.preventDefault();
+    // textAreaEl.value = ''; // making sure the text box is clean
+  
+    // for (var i = 0; i < elements.length; i++) {
+    //   elements[i].textContent = '';
+    // }
