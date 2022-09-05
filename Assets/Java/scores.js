@@ -1,18 +1,18 @@
 
-//save the last grade?
-//local storage?\ JSON.string?
+// //save the last grade?
+// //local storage?\ JSON.string?
 
 
 
 
-// to get answers to show?
+// // to get answers to show?
 // function showResponse(event){
 // }
 // submitEl.addEventListener("click", showResponse); // submit button
 
 
 
-// To get the data onto the sheet?
+// // To get the data onto the sheet?
 // var state = element.getAttribute("data-state");
 
 // if(state === "hidden")
