@@ -7,10 +7,12 @@ var questionsDiv = document.querySelector("#questions");
 var endScreen = document.getElementById("end-screen");
 var questionTitle = document.getElementById("question-title");
 var questionsChoice = document.querySelector('#choices');
+var currentQuestionIndex = 0
+
 
 pTags[0].setAttribute("style", "font-size: 20px;"); // add attributes to the words in <p>
 
-console.log(questions); // questions are attached 
+// console.log(questions); // questions are attached 
 
 
 startBtn.addEventListener("click", function() {
@@ -31,29 +33,61 @@ startBtn.addEventListener("click", function() {
 
 function startQuiz() {
     questionsDiv.removeAttribute("class");
+}
     // We need to make deconstructed for loop
     // WE create an index variable 
     // And we manually go through each questions
     //Then once the correct answer is given, then we increase our index variable manually
     //And then pass it into the next aset of questions
-    var i = 0
-    questionTitle.textContent = questions[i].title;
-    for (let j = 0; j < 4; j++) {
-        var button = document.createElement('button')
-        button.textContent = questions[i].choices[j]
-        questionsChoice.append(button)      
+    
+
+// start quiz starts our timer, variable = to set interval, call getQuestion (), 
+// inside of get question get the question from the question object- update whatever element     
+    
+
+
+function getQuestion(){
+
+    let currentQuestion = questions[currentQuestionIndex];
+    questionTitle.textContent = currentQuestion.title;
+    // clear out the question title 
+    questionsChoice.innerHTML = "";
+
+    for (let index = 0; index < currentQuestion.choices.length; index++) {
+        var choice = currentQuestion.choices[i];
+        var choiceBtn = document.createElement("button");
+        choiceBtn.setAttribute("class", "choice-button"); 
+        choiceBtn.setAttribute("value", choice-button)
+        choiceBtn.textContent =  index+1 + "." + choice 
+        questionsChoice.appendChild(choiceBtn)
     }
+}
+// grab button element and check if even a choice button 
+//if the user guesses wrong we time > 0 update timer on the page and if the get it 
+//right- move onto the other
+// wrong display
+
+//end- screen 
+// update time in timer 
+// if timer is = 0 it ends and calls the end-screen button
+
+
+
+// function for question click and that will grab the value and check it 
+    
+    
 
         
-    answerCorrect.addEventListener ("click", function() {
-        var answerCorrect = questions[i].answer
-        if(answerCorrect === button) {
-            alert("Correct!");
-    }     else {
-            alert("Wrong!")
-    }
-}) 
-}
+//     answerCorrect.addEventListener ("click", function() {
+//         var answerCorrect = questions[i].answer
+//         if(answerCorrect === button) {
+//             alert("Correct!");
+//     }     else {
+//             alert("Wrong!")
+//             // decrease
+//     }
+// }) 
+
    
 
  /* We are going to have a condition tocheck if the user clicks the right answer

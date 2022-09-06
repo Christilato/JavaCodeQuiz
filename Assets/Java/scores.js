@@ -2,13 +2,13 @@
 // //save the last grade?
 // //local storage?\ JSON.string?
 
-
-
+var showScores = document.querySelector("show-scores"); 
+var dataScores = 
 
 // // to get answers to show?
-// function showResponse(event){
-// }
-// submitEl.addEventListener("click", showResponse); // submit button
+function showScores(event){
+}
+showScores.addEventListener("click", input); // submit button
 
 
 
