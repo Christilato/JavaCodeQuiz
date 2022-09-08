@@ -100,7 +100,6 @@ function questionAnswerSelected(currentQuestionIndex,userAnswer)
 
 function endGame (){
     clearInterval(timerDiv);
-    currentQuestion.innerHTML = "";
     endScreen.style.display = "block";
      
  }
