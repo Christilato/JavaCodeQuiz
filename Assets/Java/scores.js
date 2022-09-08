@@ -3,11 +3,11 @@
 // //local storage?\ JSON.string?
 
 var showScores = document.querySelector("show-scores"); 
-var dataScores = 
+ 
 
 // // to get answers to show?
 function showScores(event){
-    JSON.parse(window.localStorage.getItem('show-scores')
+    JSON.parse(window.localStorage.getItem('show-scores'))
 
 }
 

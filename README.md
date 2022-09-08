@@ -5,4 +5,4 @@ Build a timed coding quiz with multiple-choice questions. This app will run in t
 [Live-link](https://christilato.github.io/Challenge1/)
 
 ## Screenshot 
-![Webpage screenshot](./assets/images/Screenshot.png)
+![Webpage screenshot](./Assets/Images/Screen%20Shot%202022-09-07%20at%208.17.17%20PM.png)
