@@ -10,6 +10,9 @@ var questionsChoice = document.querySelector('#choices');
 var msgDiv = document.querySelector(".msg")
 var currentQuestionIndex = 0
 var submitButton = document.querySelector("#submit");
+var startInfo = document.getElementById("start-screen");
+var questionInfo = document.getElementById("#questions");
+var endScreenInfo = document.getElementById("#end-screen");
 
 
 
@@ -34,14 +37,15 @@ startBtn.addEventListener("click", function() {
 })
 
 function startQuiz() {
+    startInfo.setAttribute("class", "hide");
     questionsDiv.removeAttribute("class");
     getQuestion ();
-    endGame ();
 }
       
 
 
 function getQuestion(){
+
     let currentQuestion = questions[currentQuestionIndex];
     questionTitle.textContent = currentQuestion.title;
     questionsChoice.innerHTML = "";
@@ -99,9 +103,10 @@ function questionAnswerSelected(currentQuestionIndex,userAnswer)
     }
 
 function endGame (){
+    questionsDiv.setAttribute("class", "hide");
+    endScreen.removeAttribute("class");
     clearInterval(timerDiv);
-    endScreen.style.display = "block";
-     
+       
  }
 
 

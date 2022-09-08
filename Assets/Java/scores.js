@@ -7,8 +7,13 @@ var dataScores =
 
 // // to get answers to show?
 function showScores(event){
+    JSON.parse(window.localStorage.getItem('show-scores')
+
 }
-showScores.addEventListener("click", input); // submit button
+
+showScores();
+
+// submit button
 
 
 
