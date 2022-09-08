@@ -4,6 +4,10 @@
 
 var showScores = document.querySelector("show-scores"); 
  
+submitButton.addEventListener("click", function(){
+    showScores();
+
+})
 
 // // to get answers to show?
 function showScores(event){
@@ -11,9 +15,8 @@ function showScores(event){
 
 }
 
-showScores();
 
-// submit button
+
 
 
 

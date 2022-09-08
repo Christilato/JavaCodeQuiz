@@ -14,6 +14,7 @@ var startInfo = document.getElementById("start-screen");
 var questionInfo = document.getElementById("#questions");
 var endScreenInfo = document.getElementById("#end-screen");
 var score = 0;
+var timer = 60;
 
 
 
@@ -21,8 +22,9 @@ pTags[0].setAttribute("style", "font-size: 20px;"); // add attributes to the wor
 
 
 startBtn.addEventListener("click", function() {
-    var timer = 60;
+
     startQuiz();
+
     var timerDecrease = setInterval(function()
     {
     timer--;
@@ -84,13 +86,13 @@ function questionAnswerSelected(currentQuestionIndex,userAnswer)
         if(userAnswer === correctAnswer )
         {
             msgDiv.textContent = "Correct!";
-            clearInterval(currentQuestionIndex);
+            //clearInterval(currentQuestionIndex);
             getQuestion();
             score++;
         } else {
             msgDiv.textContent = "Wrong Answer!"
-            timerDiv = timerDiv - 15;
-            clearInterval(currentQuestionIndex);
+            timer -= 15;
+            //clearInterval(currentQuestionIndex);
             getQuestion();
         }
     }
@@ -108,10 +110,9 @@ function savedScore(){
 }
 
 function endGame (){
+    clearInterval(timer.value);
     questionsDiv.setAttribute("class", "hide");
     endScreen.removeAttribute("class");
-    clearInterval(timerDiv);
-       
  }
 
 
